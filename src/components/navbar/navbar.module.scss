@@ -1,0 +1,96 @@
+.Nav{
+    max-width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .logo{
+        color: #dd4019;
+    }
+
+    & .hamburger{
+        cursor: pointer;
+        display: none;
+        font-size: 2rem;
+        position: relative;
+        z-index: 3;
+    }
+
+    & .navLinks{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .link{
+            cursor: pointer;
+            color: #dd4019;
+            margin: 0 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            padding: 0.1rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 1s;
+
+            &:hover{
+                border-bottom: 2px solid #dd4019;
+            }
+
+            &.active{
+                background-color: #fcd9d0;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .Nav {
+        max-width: 95%;
+        margin: 1rem auto;
+
+        & .hamburger{
+            display: block;
+        }
+
+        & .navLinks {
+            display: none;
+        }
+
+        & .showNavLinks{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 60vh;
+            z-index: 2;
+            background: #dd4019;
+            transition: all 2s;
+
+            & .link {
+                cursor: pointer;
+                color: #FFF;
+                border: 1.5px solid #FFF;
+                border-radius: 0.5rem;
+                padding: 0.3rem 2rem;
+                margin: 1rem 2rem;
+                font-size: 1rem;
+                font-weight: 600;
+                transition: all 1s;
+
+                &:hover{
+                    background: #b62b08;
+                }
+
+                &.active {
+                    border-bottom: 2px solid #ccc;
+                }
+            }
+        }
+    }
+}

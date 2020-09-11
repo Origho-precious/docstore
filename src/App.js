@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import './App.css';
+import HomePage from './pages/homepage';
+import Navbar from './components/navbar';
+import Profile from './pages/profilepage';
+import Docs from './pages/docspage';
+import { setUser } from './redux/actions';
 
-function App() {
+const App = ({ currentUser, setUser }) => {
+  useEffect(() => {
+    setUser()
+  }, [setUser]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Navbar/>
+        <Switch>
+          <Route exact path="/" component={HomePage} >
+            {
+              currentUser ? <Redirect to="/home" /> : <HomePage/>
+            }
+          </Route>
+          <Route exact path="/home" component={HomePage} />
+          <Route exact path="/dashboard/profile" component={Profile} />
+          <Route exact path="/dashboard/docs" component={Docs} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = ({ currentUser }) => {
+  return {
+    currentUser
+  }
+}
+
+export default connect(mapStateToProps, { setUser })(App);

@@ -1,0 +1,107 @@
+.User{
+    max-width: 100%;
+    margin: auto;
+
+    & h4{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    & .details {
+        background: #fcfce3;
+        color: #DD4019;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        padding: 3rem 1rem;
+        margin-top: 1rem;
+
+        & .img{
+            max-width: 100%;
+
+            & img {
+                width: 80%;
+                border-radius: 10rem;
+            }
+        }
+
+        & h5{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    & .stats{
+        max-width: 100%;
+        margin: 4rem auto;
+
+        & .statDetails{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+    
+            & > div{
+                max-width: 15rem;
+                height: 9rem;
+                padding: 1rem 2rem;
+                border-radius: 0.9rem;
+
+                & h5{
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    text-decoration: underline;
+                    margin-bottom: 0.5rem;
+                }
+
+                & p{
+                    font-weight: 600;
+                    max-width: max-content;
+                    padding: 0.35rem 1.1rem;
+                    border-radius: 100%;
+                }
+    
+                &.imgs{
+                    background: #f2fffb;
+                    color: #2a8eb9;
+
+                    & p {
+                        background: #2a8eb9;
+                        color: #f2fffb;
+                    }
+                }
+    
+                &.vids{
+                    background: #fafcd1;
+                    color: #d69a33;
+
+                    & p {
+                        background: #d69a33;
+                        color: #fafcd1;
+                    }
+                }
+    
+                &.auds{
+                    background: #e4faf2;
+                    color: #33b489;
+
+                    & p {
+                        background: #33b489;
+                        color: #e4faf2;
+                    }
+                }
+    
+                &.docs{
+                    background: #FFEEE4;
+                    color: #F17F42;
+
+                    & p {
+                        background: #F17F42;
+                        color: #FFEEE4;
+                    }
+                }
+            }
+        }
+    }
+}

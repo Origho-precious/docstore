@@ -1,0 +1,32 @@
+.Sidebar{
+    max-width: 100%;
+    margin: auto;
+    height: 90vh;
+    padding: 0 2rem 1rem;
+
+    & h2{
+        color: #dd4019;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    & .links{
+        display: flex;
+        flex-direction: column;
+
+        & a{
+            display: block;
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            // border
+            transition: all 1s;
+
+            &:hover,
+            &.active {
+                color: #dd4019;
+            }
+        }
+    }
+}

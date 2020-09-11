@@ -1,0 +1,22 @@
+
+.Button{
+    max-width: 100%;
+
+    & button{
+        background: #dd4019;
+        color: #FFF;
+        cursor: pointer;
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 0.5rem;
+        outline: none;
+        transition: all 1s;
+
+        &:hover{
+            background: #FFF;
+            color: #dd4019;
+        }
+    }
+}

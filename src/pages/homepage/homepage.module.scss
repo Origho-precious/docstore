@@ -1,0 +1,95 @@
+.Homepage{
+    max-width: 80%;
+    margin: 3rem auto;
+}
+
+.Homepage .text{
+    max-width: 100%;
+    margin: 6rem auto 3rem;
+}
+
+.Homepage .text h1{
+    color: #dd4019;
+    font-size: 3rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+.Homepage .text p{
+    font-size: 1.4rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+
+.Homepage .text p span{
+    color: #dd4019;
+    font-weight: 700;
+}
+
+.Homepage .button{
+    max-width: max-content;
+}
+
+.Homepage .button a{
+    color: #dd4019;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: all 1s;
+}
+
+.Homepage .button a:hover{
+   opacity: 0.8;
+}
+
+.Homepage .button hr{
+    background: #dd4019;
+    height: 0.2rem;
+    border: none;
+    outline: none;
+    transition: all 1s;
+}
+
+@media(max-width: 768px){
+    .Homepage {
+        max-width: 90%;
+        margin: 2rem auto 3rem;
+    }
+
+    .Homepage .text {
+        max-width: 100%;
+        margin: 0 auto 3rem;
+    }
+
+    .Homepage .text h1 {
+        font-size: 2rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+
+    .Homepage .text p {
+        font-size: 1.2rem;
+        line-height: unset;
+    }
+
+}
+
+@media(max-width: 500px){
+    .Homepage {
+        max-width: 90%;
+        margin: 2rem auto 3rem;
+    }
+
+    .Homepage .text {
+        max-width: 100%;
+        margin: 0 auto 3rem;
+    }
+
+    .Homepage .text h1 {
+        font-size: 1.5rem;
+    }
+
+    .Homepage .text p {
+        font-size: 1.1rem;
+    }
+
+}
